@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'less/reset';
+@import 'less/variables';
+@import 'less/typography';
+@import 'less/utilities';
+@import 'less/layout';
+
+body {
+  background-color: var(--Very-dark-blue);
+  color: white;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+}
+.card:hover {
+  cursor: pointer;
+  filter: brightness(130%);
+}

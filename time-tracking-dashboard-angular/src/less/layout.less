@@ -1,0 +1,39 @@
+html {
+  position: relative;
+}
+
+main {
+  height: 100vh;
+}
+
+.footer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.container {
+  max-width: 1114px;
+  margin-inline: auto;
+  margin-top: 80px;
+  @media (min-width: var(--MScreen)) {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+  }
+  outline: 1px solid palegreen;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 330px);
+  @media (min-width: var(--MScreen)) {
+    grid-template-columns: repeat(auto-fit, 256px);
+    gap: 30px;
+  }
+}
