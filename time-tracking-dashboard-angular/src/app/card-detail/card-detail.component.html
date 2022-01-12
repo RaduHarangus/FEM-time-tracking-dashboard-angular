@@ -1,0 +1,20 @@
+<div *ngIf="card">
+  <h2>{{card.title | uppercase}} Details</h2>
+  <div class="card stacked">
+    <div class="card__bg card__bg-{{card.title | replace: ' ': '' | lowercase}}">
+      <img src="assets/images/icon-{{card.title | replace: ' ': '-' | lowercase}}.svg" alt="{{card.title}}-icon">
+    </div>
+    <div class="card__main">
+      <div class="card__header">
+        <div class="title">{{ card.title }}</div>
+        <div class="settings-btn">
+          <button class="btn"><img src="assets/images/icon-ellipsis.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="card__content__main">{{ card.timeframes.weekly.current }}hrs</div>
+        <div class="card__content__second">Last Week - {{ card.timeframes.weekly.previous }}hrs</div>
+      </div>
+    </div>
+  </div>
+</div>

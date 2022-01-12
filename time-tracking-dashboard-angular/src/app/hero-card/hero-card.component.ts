@@ -15,7 +15,6 @@ export class HeroCardComponent implements OnInit {
 
   updatePlan(event: any): void {
     this.defaultPlan = event.target.innerText;
-    console.log(this.defaultPlan);
     this.onUpdatePlan.emit(this.defaultPlan);
   }
 }

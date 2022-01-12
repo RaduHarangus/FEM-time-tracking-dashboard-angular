@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeroCardComponent } from './hero-card/hero-card.component';
+import { CardDetailComponent } from './card-detail/card-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReplacePipe } from './replace.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     FooterComponent,
-    HeroCardComponent
+    HeroCardComponent,
+    CardDetailComponent,
+    DashboardComponent,
+    ReplacePipe
   ],
   imports: [
     BrowserModule,

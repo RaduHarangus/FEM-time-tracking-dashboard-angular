@@ -1,14 +1,16 @@
 <div class="hero-card card stacked">
   <div class="hero-card__header">
-    <img src="assets/images/image-jeremy.png" alt="profile image" class="hero-card__profile-img">
+    <a routerLink="/dashboard">
+      <img src="assets/images/image-jeremy.png" alt="profile image" class="hero-card__profile-img">
+    </a>
     <div class="hero-card__title">
       <p>Report for</p>
       <h1>Jeremy Robson</h1>
     </div>
   </div>
   <div class="hero-card__content">
-    <button class="btn plan-btn" (click)="updatePlan($event)">Daily</button>
-    <button class="btn plan-btn active" (click)="updatePlan($event)">Weekly</button>
-    <button class="btn plan-btn" (click)="updatePlan($event)">Monthly</button>
+    <a routerLink="/cards" class="btn plan-btn" (click)="updatePlan($event)">Daily</a>
+    <a routerLink="/cards" class="btn plan-btn active" (click)="updatePlan($event)">Weekly</a>
+    <a routerLink="/cards" class="btn plan-btn" (click)="updatePlan($event)">Monthly</a>
   </div>
 </div>
