@@ -1,4 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { CardService } from "../card.service";
+import { Card } from "../card";
 
 @Component({
   selector: 'app-hero-card',
@@ -8,9 +10,22 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class HeroCardComponent implements OnInit {
   @Output() onUpdatePlan: EventEmitter<string> = new EventEmitter<string>();
   defaultPlan = 'Weekly';
-  constructor() { }
+  cards: Card[] = [];
+  options: string[] = [];
+  constructor(private cardService: CardService) { }
 
   ngOnInit(): void {
+    this.getCards();
+    this.options = Object.getOwnPropertyNames(this.cards[0].timeframes);
+  }
+
+  getCards() {
+    this.cardService.getCards()
+      .subscribe(cards => this.cards = cards);
+  }
+
+  setActive(option: any): void {
+
   }
 
   updatePlan(event: any): void {

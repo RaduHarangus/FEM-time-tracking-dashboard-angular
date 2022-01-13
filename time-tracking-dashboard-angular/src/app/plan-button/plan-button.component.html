@@ -1,0 +1,8 @@
+<a routerLink="/dashboard"
+   class="btn plan-btn"
+   [class.active]="text === selectedOption"
+   (click)="onSelect($event, text)"
+   >
+  {{ text }}
+</a>
+<!--<span>{{text}} {{ selectedOption}} {{ text === selectedOption }}</span>-->

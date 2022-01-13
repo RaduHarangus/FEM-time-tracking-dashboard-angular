@@ -9,6 +9,7 @@ import { HeroCardComponent } from './hero-card/hero-card.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReplacePipe } from './replace.pipe';
+import { PlanButtonComponent } from './plan-button/plan-button.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReplacePipe } from './replace.pipe';
     HeroCardComponent,
     CardDetailComponent,
     DashboardComponent,
-    ReplacePipe
+    ReplacePipe,
+    PlanButtonComponent
   ],
   imports: [
     BrowserModule,
