@@ -8,13 +8,14 @@
   </div>
   <div class="card__main">
     <div class="card__header">
-      <div class="title">{{ card.title }} plan: {{ plan }}</div>
+      <div class="title">{{ card.title }}</div>
       <div class="settings-btn">
         <button class="btn"><img src="assets/images/icon-ellipsis.svg" alt=""></button>
       </div>
     </div>
     <div class="card__content">
-      <div class="card__content__main" *ngIf="plan as selectPlan">{{ card.timeframes['weekly'].current }}hrs <span>{{selectPlan}}</span></div>
+<!--      <div class="card__content__main" *ngIf="plan as selectPlan">{{ card.timeframes['weekly'].current }}hrs</div>-->
+      <div class="card__content__main">{{ card.timeframes | filterPlan: ''+plan | json }}hrs</div>
       <div class="card__content__second">Last Week - {{card.timeframes['weekly'].previous}}hrs</div>
     </div>
   </div>

@@ -26,5 +26,6 @@ export class HeroCardComponent implements OnInit {
 
   selectOption(option: string): void {
     this.selectedOption = option;
+    this.onUpdatePlan.emit(option);
   }
 }

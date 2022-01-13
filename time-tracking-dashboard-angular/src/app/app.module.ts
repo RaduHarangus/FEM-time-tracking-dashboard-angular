@@ -10,6 +10,7 @@ import { CardDetailComponent } from './card-detail/card-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReplacePipe } from './replace.pipe';
 import { PlanButtonComponent } from './plan-button/plan-button.component';
+import { FilterPlanPipe } from './filter-plan.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PlanButtonComponent } from './plan-button/plan-button.component';
     CardDetailComponent,
     DashboardComponent,
     ReplacePipe,
-    PlanButtonComponent
+    PlanButtonComponent,
+    FilterPlanPipe
   ],
   imports: [
     BrowserModule,

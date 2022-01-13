@@ -11,9 +11,10 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.plan = 'weekly';
   }
 
-  UpdatePlan(plan: string): void {
+  updatePlan(plan: string): void {
     this.plan = plan;
     console.log('from app: ', this.plan);
   }
