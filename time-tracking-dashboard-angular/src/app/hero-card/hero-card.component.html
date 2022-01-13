@@ -13,12 +13,9 @@
     <div *ngFor="let option of options">
       <app-plan-button
         [text]=option
-
+        [selectedOption]=selectedOption
+        (onSelectOption)="selectOption(option)"
       ></app-plan-button>
     </div>
   </div>
 </div>
-
-
-<!--    <a routerLink="/dashboard" class="btn plan-btn" #optionPlan (click)="setActive(optionPlan);updatePlan($event)">Daily {{optionPlan}}</a>-->
-<!--[class.active]="option === selectedOption"-->

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-plan-button',
@@ -6,24 +6,18 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./plan-button.component.less']
 })
 export class PlanButtonComponent implements OnInit {
-  @Input() text?:string;
-  selectedOption: string = '';
+  @Input() text?: string;
+  @Input() selectedOption?: string;
+
+  @Output() onSelectOption: EventEmitter<string> = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSelect(event: any, text: any): void {
-    this.selectedOption = event.target.innerText;
-    this.displayAll();
-  }
-
-  displayAll(): void {
-    const buttons = document.getElementsByClassName('plan-btn');
-    console.log(buttons);
-    // console.log('text: ', text);
-    // console.log('selectedOption: ', this.selectedOption);
-    // console.log('equality: ', text === this.selectedOption);
+  onSelect(event: any): void {
+    this.onSelectOption.emit(event.target.innerText);
   }
 
 }

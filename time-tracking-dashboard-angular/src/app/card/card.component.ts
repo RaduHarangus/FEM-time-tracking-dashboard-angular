@@ -10,8 +10,6 @@ import { PlanService } from "../plan.service";
 })
 export class CardComponent implements OnInit {
   @Input() plan?: string;
-  // defaultPlan = 'Weekly';
-  // plan: string = 'default plan';
   cards: Card[] = [];
   selectedCard?: Card;
 

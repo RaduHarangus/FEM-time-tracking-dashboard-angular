@@ -9,7 +9,7 @@ import { Card } from "../card";
 })
 export class HeroCardComponent implements OnInit {
   @Output() onUpdatePlan: EventEmitter<string> = new EventEmitter<string>();
-  defaultPlan = 'Weekly';
+  selectedOption = 'weekly';
   cards: Card[] = [];
   options: string[] = [];
   constructor(private cardService: CardService) { }
@@ -24,12 +24,7 @@ export class HeroCardComponent implements OnInit {
       .subscribe(cards => this.cards = cards);
   }
 
-  setActive(option: any): void {
-
-  }
-
-  updatePlan(event: any): void {
-    this.defaultPlan = event.target.innerText;
-    this.onUpdatePlan.emit(this.defaultPlan);
+  selectOption(option: string): void {
+    this.selectedOption = option;
   }
 }
