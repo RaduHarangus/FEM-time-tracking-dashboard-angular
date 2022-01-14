@@ -9,9 +9,10 @@ import { Card } from "../card";
 })
 export class HeroCardComponent implements OnInit {
   @Output() onUpdatePlan: EventEmitter<string> = new EventEmitter<string>();
-  selectedOption = 'weekly';
+  selectedOption:string = '';
   cards: Card[] = [];
   options: string[] = [];
+  plan?: string;
   constructor(private cardService: CardService) { }
 
   ngOnInit(): void {
@@ -27,5 +28,6 @@ export class HeroCardComponent implements OnInit {
   selectOption(option: string): void {
     this.selectedOption = option;
     this.onUpdatePlan.emit(option);
+    this.plan = option;
   }
 }

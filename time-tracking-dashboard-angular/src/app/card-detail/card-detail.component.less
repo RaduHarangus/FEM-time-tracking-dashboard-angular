@@ -1,0 +1,36 @@
+.card__main {
+  height: unset;
+  min-height: 120px;
+  margin-top: var(--card-tab-height3);
+}
+
+.card__header {
+  grid-template-columns: 3fr 1fr;
+  line-height: 1;
+}
+
+.card__bg {
+  display: block;
+}
+
+.card__content {
+  gap: 1rem;
+}
+
+.col-span2 {
+  grid-column: span 2;
+  place-self: center;
+}
+
+.title,
+.settings-btn {
+  place-self: center;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  & h2 {
+    place-self: center;
+  }
+}

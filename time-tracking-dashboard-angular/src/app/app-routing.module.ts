@@ -7,8 +7,7 @@ import { CardDetailComponent } from "./card-detail/card-detail.component";
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:title', component: CardDetailComponent },
-  // { path: 'cards', component: CardComponent }
+  { path: 'detail/:title', component: CardDetailComponent }
 ];
 
 @NgModule({

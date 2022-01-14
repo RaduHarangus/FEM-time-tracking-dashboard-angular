@@ -6,17 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent implements OnInit {
-  plan: string = '';
+  plan?: string;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.plan = 'weekly';
+    console.log("dashboard plan: ", this.plan);
   }
 
   updatePlan(plan: string): void {
     this.plan = plan;
-    console.log('from app: ', this.plan);
+    console.log("dashboard update plan: ", this.plan);
   }
 
 }

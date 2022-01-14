@@ -5,12 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPlanPipe implements PipeTransform {
 
-  transform(value: Object, filterBy: string): Object {
-    if(!value || !filterBy)
+  transform(object: Object, filterBy: string): Object {
+    if(!object || !filterBy)
     {
-      return value;
+      return object;
     }
-    return Object.values(value);
+    return Object.values(object);
   }
-
 }

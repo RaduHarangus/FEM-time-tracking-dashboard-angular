@@ -8,6 +8,7 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class PlanButtonComponent implements OnInit {
   @Input() text?: string;
   @Input() selectedOption?: string;
+  @Input() plan?: string;
 
   @Output() onSelectOption: EventEmitter<string> = new EventEmitter<string>();
 

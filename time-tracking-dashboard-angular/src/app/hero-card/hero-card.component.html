@@ -13,6 +13,7 @@
     <div *ngFor="let option of options">
       <app-plan-button
         [text]=option
+        [plan]=plan
         [selectedOption]=selectedOption
         (onSelectOption)="selectOption(option)"
       ></app-plan-button>

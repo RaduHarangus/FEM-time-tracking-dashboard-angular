@@ -14,9 +14,28 @@
       </div>
     </div>
     <div class="card__content">
-<!--      <div class="card__content__main" *ngIf="plan as selectPlan">{{ card.timeframes['weekly'].current }}hrs</div>-->
-      <div class="card__content__main">{{ card.timeframes | filterPlan: ''+plan | json }}hrs</div>
-      <div class="card__content__second">Last Week - {{card.timeframes['weekly'].previous}}hrs</div>
+      <div class="card__content__main">
+        <div *ngIf="plan === 'daily'">
+          {{ card.timeframes.daily.current }}hrs
+        </div>
+        <div *ngIf="plan === 'weekly'">
+          {{ card.timeframes.weekly.current }}hrs
+        </div>
+        <div *ngIf="plan === 'monthly'">
+          {{ card.timeframes.monthly.current }}hrs
+        </div>
+      </div>
+      <div class="card__content__second">
+        <div *ngIf="plan === 'daily'">
+          Last Week - {{card["timeframes"]['daily']["previous"]}}hrs
+        </div>
+        <div *ngIf="plan === 'weekly'">
+          Last Week - {{card["timeframes"]['weekly']["previous"]}}hrs
+        </div>
+        <div *ngIf="plan === 'monthly'">
+          Last Week - {{card["timeframes"]['monthly']["previous"]}}hrs
+        </div>
+      </div>
     </div>
   </div>
 </div>
