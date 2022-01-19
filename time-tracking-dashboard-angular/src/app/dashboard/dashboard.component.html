@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="cards-grid">
+  <div class="grid2">
     <app-hero-card plan="plan" (onUpdatePlan)="updatePlan($event)"></app-hero-card>
-    <div *ngIf="(plan === 'daily') || (plan === 'weekly') || (plan === 'monthly')">
+    <ng-container *ngIf="(plan === 'daily') || (plan === 'weekly') || (plan === 'monthly')">
       <app-card [plan]="plan"></app-card>
-    </div>
+    </ng-container>
   </div>
 </div>
