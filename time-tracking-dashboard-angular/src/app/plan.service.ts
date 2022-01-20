@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from "rxjs";
+import { Observable, of, BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlanService {
 
+  private planSource = new BehaviorSubject('weekly');
+  currentPlan = this.planSource.asObservable();
+
   constructor() { }
 
-  getPlan(): Observable<string> {
-    return of('weekly');
+  changePlan(newPlan: string): void {
+    this.planSource.next(newPlan);
   }
 }

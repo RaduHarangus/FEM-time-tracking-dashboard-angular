@@ -15,6 +15,9 @@ export class PlanButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if (!this.selectedOption) {
+      this.selectedOption = this.plan;
+    }
   }
 
   onSelect(event: any): void {

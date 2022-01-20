@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'time-tracking-dashboard-angular';
-  // plan: string = '';
-  //
-  // UpdatePlan(plan: string): void {
-  //   this.plan = plan;
-  //   console.log('from app: ', this.plan);
-  // }
-
 }

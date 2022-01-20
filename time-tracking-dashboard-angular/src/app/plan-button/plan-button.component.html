@@ -1,4 +1,4 @@
-<a routerLink="/dashboard"
+<a [routerLink]="['/dashboard']"
    class="btn plan-btn"
    [class.active]="text === selectedOption"
    (click)="onSelect($event)"

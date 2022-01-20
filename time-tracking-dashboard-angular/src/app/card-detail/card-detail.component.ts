@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
-import { Location } from "@angular/common";
 import { Card } from '../card';
 import { CardService } from "../card.service";
 
@@ -11,10 +10,10 @@ import { CardService } from "../card.service";
 })
 export class CardDetailComponent implements OnInit {
   @Input() card?: Card;
+  @Input() plan?: string;
   constructor(
     private route: ActivatedRoute,
-    private cardService: CardService,
-    private location: Location
+    private cardService: CardService
   ) { }
 
   ngOnInit(): void {
