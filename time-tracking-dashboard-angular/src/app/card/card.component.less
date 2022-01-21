@@ -1,3 +1,5 @@
+@import "../../less/variables.less";
+
 .selected {
   filter: brightness(130%);
 }
@@ -7,15 +9,8 @@
   gap: 25px;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 330px);
-  @media (min-width: 550px) {
+  @media (min-width: @FirstBreak) {
     grid-template-columns: repeat(auto-fit, 256px);
     gap: 30px;
-  }
-}
-
-.card__main {
-  height: 120px;
-  @media (min-width: 800px) {
-    height: 200px;
   }
 }

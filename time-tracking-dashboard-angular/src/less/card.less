@@ -21,7 +21,7 @@
     border-radius: var(--Border-radius);
     padding: var(--card-padding);
     height: 120px;
-    @media (min-width: var(--MScreen)) {
+    @media (min-width: @FirstBreak) {
       height: 200px;
       margin-top: var(--card-tab-height2);
     }
@@ -34,14 +34,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    @media (min-width: var(--MScreen)) {
+    @media (min-width: @FirstBreak) {
       grid-template-columns: 1fr;
       margin-top: 1rem;
     }
     &__main {
       font-size: 25px;
       font-weight: 300;
-      @media (min-width: var(--MScreen)) {
+      @media (min-width: @FirstBreak) {
         font-size: 40px;
       }
     }
@@ -50,7 +50,7 @@
       font-size: 12px;
       font-weight: 400;
       color: var(--Pale-Blue);
-      @media (min-width: var(--MScreen)) {
+      @media (min-width: @FirstBreak) {
         justify-self: unset;
       }
     }
@@ -84,83 +84,5 @@
   }
   &-selfcare {
     background-color: var(--Soft-yellow);
-  }
-}
-
-.hero-card {
-  background-color: var(--Dark-blue);
-  @media (min-width: var(--MScreen)) {
-    grid-row: span 2;
-  }
-  &__header {
-    display: grid;
-    gap: 5%;
-    grid-template-columns: 30% 65%;
-    @media (min-width: var(--MScreen)) {
-      grid-template-columns: 1fr;
-      height: 355px;
-      margin-bottom: 165px;
-    }
-    background-color: var(--Blue);
-    border-radius: var(--Border-radius);
-    padding: 2rem var(--card-padding);
-    z-index: 10;
-    margin-bottom: 4rem;
-  }
-  &__profile-img {
-    width: 65px;
-    border: 2px solid white;
-    border-radius: 50%;
-    place-self: center;
-    @media (min-width: var(--MScreen)) {
-      place-self: start;
-    }
-  }
-  &__title {
-    font-size: 1rem; // 18px
-    align-self: center;
-    @media (min-width: var(--MScreen)) {
-      place-self: start;
-      font-size: 2rem; // 36px
-    }
-    & p {
-      color: var(--Pale-Blue);
-      font-size: 0.8333em; // 15px / 30px
-    }
-    & h1 {
-      font-size: 1.1666em; // 21px / 42px
-    }
-  }
-  &__content {
-    font-size: 1rem; // 18px
-    align-self: end;
-    background-color: var(--Dark-blue);
-    border-radius: var(--Border-radius);
-    line-height: 5;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    @media (min-width: var(--MScreen)) {
-      grid-template-columns: 1fr;
-      height: 165px;
-      padding-left: 1.25rem;
-      line-height: 1;
-    }
-    & > * {
-      text-align: center;
-      font-size: 1em; // 18px
-      color: var(--Desaturated-blue);
-      line-height: inherit;
-      transition: transform .2s ease-in-out;
-      @media (min-width: var(--MScreen)) {
-        text-align: left;
-        align-self: center;
-        font-size: 1.025em;
-      }
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        color: white;
-      }
-    }
   }
 }

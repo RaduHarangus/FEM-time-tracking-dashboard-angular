@@ -10,13 +10,13 @@
   </div>
 
   <div class="hero-card__content">
-    <div *ngFor="let option of options">
+    <ng-container *ngFor="let option of options">
       <app-plan-button
         [text]=option
         [plan]="plan"
         [selectedOption]=selectedOption
         (onSelectOption)="selectOption(option)"
       ></app-plan-button>
-    </div>
+    </ng-container>
   </div>
 </div>

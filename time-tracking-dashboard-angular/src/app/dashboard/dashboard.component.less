@@ -1,7 +1,8 @@
+@import "../../less/variables.less";
 .grid2 {
   display: grid;
   grid-template-columns: 1fr;
-  @media(min-width: 550px) {
+  @media(min-width: @FirstBreak) {
     grid-template-columns: 1fr 5fr;
   }
 }
